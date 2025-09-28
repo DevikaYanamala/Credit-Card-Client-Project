@@ -4,5 +4,6 @@ Flask
 gunicorn
 pandas
 openpyxl
+matplotlib
 
 
