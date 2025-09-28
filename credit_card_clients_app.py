@@ -16,6 +16,27 @@ def summary():
     summary = df.describe().to_html()
     return f"<h2>Dataset Summary</h2>{summary}"
 
+import matplotlib.pyplot as plt
+import io
+from flask import send_file
+
+@app.route("/plot")
+def plot():
+    # Example: Age distribution
+    fig, ax = plt.subplots(figsize=(6,4))
+    df["AGE"].hist(bins=20, ax=ax, color="skyblue", edgecolor="black")
+    ax.set_title("Age Distribution of Clients")
+    ax.set_xlabel("Age")
+    ax.set_ylabel("Count")
+
+    # Save to memory instead of a file
+    img = io.BytesIO()
+    plt.savefig(img, format="png")
+    img.seek(0)
+    plt.close()
+    return send_file(img, mimetype="image/png")
+
 if __name__ == "__main__":
     app.run(debug=True)
+
 
