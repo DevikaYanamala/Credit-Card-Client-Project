@@ -51,6 +51,7 @@ credit_card_clients_app/
 
 
 ### ⚙️ Run Locally
+
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd credit_card_clients_app
@@ -73,7 +74,7 @@ Add styled HTML templates
 
 More visualizations (e.g., payment defaults by education)
 
-Cloud storage/database integratio
+Cloud storage/database integration
 
 ## 📜 License
 
