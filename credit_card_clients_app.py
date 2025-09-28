@@ -4,7 +4,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load your dataset (adjust the path if needed)
-df = pd.read_excel("C:/Users/devik/Downloads/default_of_credit_card_clients_0 (1).xlsx")
+df = pd.read_excel("default_of_credit_card_clients_0 (1).xlsx")
 
 @app.route("/")
 def home():
@@ -18,3 +18,4 @@ def summary():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
